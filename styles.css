@@ -1,0 +1,80 @@
+  
+   #barrita {
+      z-index: 100;
+    
+       }
+    
+       .form-label {
+
+        color: #2B7953;
+        font-weight: bold;
+       }
+
+
+    .navbar {
+        border: 2px solid #2B7953; 
+        border-radius: 8px;
+        margin: 2px;
+    }
+    .nav-item:hover {
+        font-weight: bold;
+    }
+    .breadcrumb-item a{
+        text-decoration: none;
+        color: black;
+        transition: font-weight 0.3s;
+        font-weight: normal;
+        
+        
+    }
+    .breadcrumb-item a:hover{
+      
+        color: #2B7953;
+        font-weight: bolder;
+        
+    }
+
+
+    .centered-image {
+    object-fit: cover;
+    object-position: center; /* Centra la imagen verticalmente */
+    max-height: 200px; /* Establece la altura máxima para mantener la relación de aspecto */
+    max-width: 1024px;
+}
+
+    .custom-span {
+        margin-right: 30px;
+        
+    }
+
+    .bi {
+      text-decoration: none;
+    }
+   .bi:hover {
+      cursor: pointer;
+      color: #2B7953;
+   }
+
+    tbody tr:hover {
+            background-color: #f0f0f0; /* Color gris */
+        }
+
+    .table-container {
+          width: 80%;
+          margin: auto;
+        }
+
+ @media (max-width: 768px) {
+  .table-container {
+    width: 90%;
+    overflow-x: auto;
+    margin: auto;
+    
+ }
+
+
+  .table-container table {
+    width: 1200px;
+  }
+ }
+   

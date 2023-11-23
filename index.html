@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pag Web BS5</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+</head>
+
+<body>
+  <header>
+    <nav id="header" class="navbar navbar-expand-lg navbar-light">
+      <div class="container-fluid">
+        <img src="logotipo.png" width="100" class="img-fluid rounded-circle" />
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Sobre Nosotros</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Restaurante</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                Carta
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#">Entrantes</a></li>
+                <li>
+                  <hr class="dropdown-divider" />
+                </li>
+                <li><a class="dropdown-item" href="#">Plato Principal</a></li>
+                <li>
+                  <hr class="dropdown-divider" />
+                </li>
+                <li><a class="dropdown-item" href="#">Postres</a></li>
+              </ul>
+            </li>
+          </ul>
+          <form class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="Encuentra tu producto" aria-label="Search" />
+            <button class="btn btn-outline-success" type="button" data-bs-toggle="modal" data-bs-target="#loginModal"> Login </button>
+
+            <!-- tabindex evita que el usuario navegue por los elementos detrás de la ventana modal mientras esta está abierta.-->
+            <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="loginModalLabel">
+                      Inicio de Sesión
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <form>
+                      <div class="mb-3">
+                        <label for="username" class="form-label">Nombre de usuario</label>
+                        <input type="text" class="form-control" id="username" placeholder="example@gmail.com" />
+                      </div>
+                      <div class="mb-3">
+                        <label for="password" class="form-label">Contraseña</label>
+                        <input type="password" class="form-control" id="password" placeholder="............." />
+                      </div>
+                    </form>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                      Aceptar
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <nav id="barrita" style="--bs-breadcrumb-divider: ''" aria-label="breadcrumb" class="m-3 bg-light">
+      <ol class="breadcrumb d-flex justify-content-center">
+        <li class="breadcrumb-item me-5"><a href="#header">Inicio</a></li>
+        <li class="breadcrumb-item me-5">
+          <a href="#main">Página Principal</a>
+        </li>
+        <li class="breadcrumb-item"><a href="#footer">Pie de Página</a></li>
+      </ol>
+    </nav>
+    <div class="d-none d-lg-block">
+      <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+        <div id="main" class="carousel-inner" style="max-width: 1024px; margin: 0 auto">
+          <div class="carousel-item active" data-bs-interval="1000">
+            <img src="gambas.jfif" class="d-block w-100 centered-image" alt="gambas" />
+          </div>
+          <div class="carousel-item" data-bs-interval="20000">
+            <img src="verdura.jfif" class="d-block w-100 centered-image" alt="verdura" />
+          </div>
+          <div class="carousel-item" data-bs-interval="20000">
+            <img src="arroz.jfif" class="d-block w-100 centered-image" alt="arroz" />
+          </div>
+          <div class="carousel-item" data-bs-interval="20000">
+            <img src="tarta.jfif" class="d-block w-100 centered-image" alt="tarta" />
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval"
+          data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" style="background-color: #2b7953" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval"
+          data-bs-slide="next">
+          <span class="carousel-control-next-icon" style="background-color: #2b7953" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+    <div class="container mt-5">
+      <div class="row justify-content-center">
+        <div class="col-4 col-md-8 col-sm-8 text-center">
+          <div class="row row-cols-1 justify-content-center">
+            <div class="card" style="width: 15rem">
+              <h5 class="card-title">Entrantes</h5>
+              <div class="card-body">
+                <img src="gambas.jfif" class="card-img" alt="gambas" />
+                <p class="card-text d-none d-md-block">
+                  es simplemente el texto de relleno de las imprentas y
+                  archivos de texto. Lorem Ipsum ha sido el texto de relleno
+                  estándar de las industrias desde el año 1500, cuando un
+                  impresor
+                </p>
+              </div>
+            </div>
+
+            <div class="card" style="width: 15rem">
+              <h5 class="card-title">Primer Plato</h5>
+              <div class="card-body">
+                <img src="verdura.jfif" class="card-img" alt="gambas" />
+                <p class="card-text d-none d-md-block">
+                  es simplemente el texto de relleno de las imprentas y
+                  archivos de texto. Lorem Ipsum ha sido el texto de relleno
+                  estándar de las industrias desde el año 1500, cuando un
+                  impresor
+                </p>
+              </div>
+            </div>
+
+            <div class="card" style="width: 15rem">
+              <h5 class="card-title">Postres</h5>
+              <div class="card-body">
+                <img src="tarta.jfif" class="card-img" alt="gambas" />
+                <p class="card-text d-none d-md-block">
+                  es simplemente el texto de relleno de las imprentas y
+                  archivos de texto. Lorem Ipsum ha sido el texto de relleno
+                  estándar de las industrias desde el año 1500, cuando un
+                  impresor
+                </p>
+              </div>
+            </div>
+
+            <div class="card" style="width: 15rem">
+              <h5 class="card-title">Internacional</h5>
+              <div class="card-body">
+                <img src="india.jfif" class="card-img" alt="gambas" />
+                <p class="card-text d-none d-md-block">
+                  es simplemente el texto de relleno de las imprentas y
+                  archivos de texto. Lorem Ipsum ha sido el texto de relleno
+                  estándar de las industrias desde el año 1500, cuando un
+                  impresor
+                </p>
+              </div>
+            </div>
+
+            <div class="card" style="width: 15rem">
+              <h5 class="card-title">Restaurante</h5>
+              <div class="card-body">
+                <img src="restaurante.jfif" class="card-img" alt="gambas" />
+                <p class="card-text d-none d-md-block">
+                  es simplemente el texto de relleno de las imprentas y
+                  archivos de texto. Lorem Ipsum ha sido el texto de relleno
+                  estándar de las industrias desde el año 1500, cuando un
+                  impresor
+                </p>
+              </div>
+            </div>
+
+            <div class="card" style="width: 15rem">
+              <h5 class="card-title">Vistas al mar</h5>
+              <div class="card-body">
+                <img src="playa.jfif" class="card-img" alt="gambas" />
+                <p class="card-text d-none d-md-block">
+                  es simplemente el texto de relleno de las imprentas y
+                  archivos de texto. Lorem Ipsum ha sido el texto de relleno
+                  estándar de las industrias desde el año 1500, cuando un
+                  impresor
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="table-container mt-5">
+      <div class="row justify-content-center">
+        <div class="col">
+          <table class="table">
+            <thead>
+              <tr class="table-dark">
+                <th scope="col">#</th>
+                <th scope="col">First</th>
+                <th scope="col">Last</th>
+                <th scope="col">Handle</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>Larry</td>
+                <td>the Bird</td>
+                <td>@twitter</td>
+              </tr>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">First</th>
+                <th scope="col">Last</th>
+                <th scope="col">Handle</th>
+              </tr>
+              <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>Larry</td>
+                <td>the Bird</td>
+                <td>@twitter</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div id="footer" class="container text-center mt-5">
+      <div class="row align-items-center">
+        <div class="col-12 col-md-5 mb-4 mt-3">
+          <a href="#" class="custom-span">Términos legales</a>
+          <a href="#" class="custom-span">Contacto</a>
+          <a href="#" class="custom-span">Política de Privacidad</a>
+        </div>
+        <div class="col-2 d-none d-md-block">
+          <img src="logotipo.png" alt="logotipoEmpresa" width="100px" />
+        </div>
+        <div class="col-12 col-sm-12 col-md-5 mb-3">
+          <a class="bi bi-facebook text-primary" target="_blank" href="https://www.facebook.com/?locale=es_ES">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-facebook"
+              viewBox="0 0 16 16">
+              <path
+                d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
+            </svg>
+          </a>
+          <a class="bi bi-linkedin text-primary ms-3" target="_blank" href="https://www.linkedin.com/learning-login/">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-linkedin"
+              viewBox="0 0 16 16">
+              <path
+                d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z" />
+            </svg>
+          </a>
+          <a class="bi bi-twitter-x ms-3" target="_blank" href="https://twitter.com/?lang=es">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-twitter-x"
+              viewBox="0 0 16 16">
+              <path
+                d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865l8.875 11.633Z" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+    integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+    integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
